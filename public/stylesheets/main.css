@@ -73,11 +73,9 @@ h6, .h6 {
   border-left: 5px solid transparent;
 }
 
-
 /*
  * Blog name and description
  */
-
 .blog-header {
   padding-top: 20px;
   padding-bottom: 20px;
@@ -92,7 +90,6 @@ h6, .h6 {
   font-size: 20px;
   color: #999;
 }
-
 
 /*
  * Main column and sidebar layout
@@ -132,7 +129,6 @@ h6, .h6 {
   border-radius: 30px;
 }
 
-
 /*
  * Blog posts
  */
@@ -149,6 +145,13 @@ h6, .h6 {
   color: #999;
 }
 
+.truncate {
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  overflow: hidden;
+  max-height: 12em;
+  line-height: 1.5em;
+}
 
 /*
  * Footer

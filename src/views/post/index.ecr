@@ -5,7 +5,7 @@
   <p class="blog-post-meta"><%= post.last_updated %> by <a
      href="https://github.com/drujensen/kemalyst" target="_blank">Dru Jensen</a></p>
 
-  <p><%= post.markdown_body %></p>
+  <div class="truncate"><%= post.markdown_body %></div>
   
   <p>
     <a href="/posts/<%= post.id %>">read</a>

@@ -14,5 +14,3 @@ get    "/posts/:id", PostController::Show.instance
 get    "/posts/:id/edit", PostController::Edit.instance  
 put    "/posts/:id", PostController::Update.instance
 delete "/posts/:id", PostController::Delete.instance
-
-get    "/api/posts/:id", ApiController::Show.instance

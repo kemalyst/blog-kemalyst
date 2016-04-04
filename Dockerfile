@@ -15,9 +15,13 @@ RUN echo "deb http://dist.crystal-lang.org/apt crystal main" > /etc/apt/sources.
 # Install Dependencies
 RUN apt-get update && apt-get install -y \ 
   build-essential \
-  libyaml-0-2 \
   libpq-dev \
+  libyaml-dev \
   libssl-dev \
+  zlib1g-dev \
+  libevent-dev \
+  libgc-dev \
+  libpq-dev \
   git \
   crystal
 
