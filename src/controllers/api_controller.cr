@@ -7,7 +7,7 @@ module ApiController
       id = context.params["id"]
       post = Post.find(id)
       if post
-        json post.to_jsonapi, 200
+        json post, 200
       else
         json %({"error":"#{id} could not be found""}), 404
       end

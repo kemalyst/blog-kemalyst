@@ -1,20 +1,13 @@
 require "kemalyst"
 require "kemalyst/adapter/pg"
 require "markdown/markdown"
-require "jsonapi"
 
 class Post < Kemalyst::Model
-  include JSONAPI
   adapter pg
   
   sql_mapping({ 
     name: "VARCHAR(255)", 
     body: "TEXT" 
-  })
-
-  jsonapi_mapping({
-    name: String,
-    body: String
   })
 
   def last_updated

@@ -1,6 +1,7 @@
-mysql:
+pg:
   host: 127.0.0.1
-  port: 3306
+  port: 5432
   database: blog
   username: admin
   password: ${DB_PASS}
+

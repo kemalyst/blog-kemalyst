@@ -10,7 +10,7 @@ shards:
 
   kemalyst:
     github: drujensen/kemalyst
-    commit: 816a5b2444f1c2985ab5a81204a461b3bc60b833
+    commit: 3308d697493dc1e4ffb95991bd67f9eee7fabeaf
 
   kilt:
     github: jeromegn/kilt
@@ -20,15 +20,11 @@ shards:
     github: waterlink/mocks.cr
     version: 0.8.0
 
-  mysql:
-    github: waterlink/crystal-mysql
-    commit: 3d388be7a84f832808c98808540c7237460ff749
-
   pg:
     github: will/crystal-pg
     commit: cafe38b532b859122337455aa09afeac4f8deeaa
 
   pool:
     github: ysbaddaden/pool
-    version: 0.2.1
+    commit: ed6af70886e76de84f440b6efe9bc6f49ab24fbe
 
