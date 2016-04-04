@@ -1,12 +1,12 @@
 version: '2'
 services:
   db:
-    image: mysql
+    image: pg 
   web:
     build: .
     command: crystal src/app.cr
     volumes:
-      - .:/demo
+      - .:/webapps/blog
     ports:
       - "80:3000"
     depends_on:

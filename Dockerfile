@@ -21,9 +21,9 @@ RUN apt-get update && apt-get install -y \
   git \
   crystal
 
-RUN mkdir -p /webapps/demo
-ADD . /webapps/demo
-WORKDIR /webapps/demo
+RUN mkdir -p /webapps/blog
+ADD . /webapps/blog
+WORKDIR /webapps/blog
 
 RUN shards update
 
