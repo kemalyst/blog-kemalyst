@@ -1,35 +1,19 @@
-# Set the base image to Ubuntu
-FROM ubuntu
+FROM heroku/cedar
 
-# File Author / Maintainer
-MAINTAINER Dru Jensen
+RUN mkdir -p /app/user
 
-# Update the repository sources list
-RUN apt-get update
+RUN curl -L https://github.com/crystal-lang/crystal/releases/download/0.15.0/crystal-0.15.0-1-linux-x86_64.tar.gz | tar xvz -C /app/.
 
-# Add Crystal repository to sources
-RUN curl http://dist.crystal-lang.org/apt/setup.sh | sudo bash
-RUN apt-key adv --keyserver keys.gnupg.net --recv-keys 09617FD37CC06B54
-RUN echo "deb http://dist.crystal-lang.org/apt crystal main" > /etc/apt/sources.list.d/crystal.list
+RUN curl -Lo /app/crystal-0.15.0-1/bin/shards.gz https://github.com/crystal-lang/shards/releases/download/v0.6.2/shards-0.6.2_linux_x86_64.gz 
 
-# Install Dependencies
-RUN apt-get update && apt-get install -y \ 
-  build-essential \
-  libpq-dev \
-  libyaml-dev \
-  libssl-dev \
-  zlib1g-dev \
-  libevent-dev \
-  libgc-dev \
-  libpq-dev \
-  git \
-  crystal
+RUN cd /app/crystal-0.15.0-1/bin && gunzip shards.gz && chmod 755 shards
 
-RUN mkdir -p /webapps/blog
-ADD . /webapps/blog
-WORKDIR /webapps/blog
+ENV PATH /app/crystal-0.15.0-1/bin:$PATH
+
+ADD . /app/user
+WORKDIR /app/user
 
 RUN shards update
 
-EXPOSE 3000
-CMD ["crystal", "src/app.cr"]
+CMD ["crystal", "spec"]
+

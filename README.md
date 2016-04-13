@@ -1,4 +1,6 @@
-# blog
+# Blog using Crystal and Kemalyst
+
+[![Build Status](https://travis-ci.org/drujensen/blog.svg?branch=master)](https://travis-ci.org/drujensen/blog)
 
 This is a sample application that shows how to build a crud application.  This
 also provides an example of securing specific pages and leveraging the session
@@ -6,7 +8,7 @@ to maintain authorization.
 
 ## Installation
 
-Create a mysql database called `blog` and configure the `config/database.yml`
+Create a pg database called `blog` and configure the `config/database.yml`
 to provide the credentials to access the table.
 Then:
 ```
@@ -23,6 +25,13 @@ crystal build src/app.cr
 ```
 username: admin
 password: password
+
+## Docker and Docker Compose
+
+The Docker scripts are compatible with Heroku Cedar Images.  You can skip the above and run:
+```
+docker-compose run web
+```
 
 ## Contributing
 
