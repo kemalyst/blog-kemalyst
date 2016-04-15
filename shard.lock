@@ -4,13 +4,9 @@ shards:
     github: drujensen/delimiter_tree
     commit: ff00d3f211aa0e6850b04c12941e88522c3a59d7
 
-  jsonapi:
-    github: drujensen/jsonapi
-    commit: 5da15b923205b8759dd90c6caaee76fdd65c0802
-
   kemalyst:
     github: drujensen/kemalyst
-    commit: cde89c29c0ea89ce1ef9e357f2b4f2f192b00520
+    commit: cd8fc5cfb423c8deccbff612acc8bd292d61d498
 
   kilt:
     github: jeromegn/kilt
@@ -26,5 +22,5 @@ shards:
 
   pool:
     github: ysbaddaden/pool
-    commit: ed6af70886e76de84f440b6efe9bc6f49ab24fbe
+    commit: eda12cf38fcf0d70f10ea99ac0bb70a58ab0cdda
 

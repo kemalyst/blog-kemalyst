@@ -8,10 +8,10 @@
   <div class="truncate"><%= post.markdown_body %></div>
   
   <p>
-    <a href="/posts/<%= post.id %>">read</a>
+    <a href="/posts/<%= post.id %>">Read More...</a>
     <% if authorized %>
-    | <a href="/posts/<%= post.id %>/edit">edit</a> | 
-    <a href="/posts/<%= post.id %>?_method=delete" onclick="return confirm('Are you sure?');">delete</a>
+    | <a href="/posts/<%= post.id %>/edit">Edit</a> | 
+    <a href="/posts/<%= post.id %>?_method=delete" onclick="return confirm('Are you sure?');">Delete</a>
     <% end %>
   </p>
             

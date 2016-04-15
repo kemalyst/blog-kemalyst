@@ -1,7 +1,4 @@
 pg:
-  host: 127.0.0.1
-  port: 5432
-  database: blog
-  username: admin
-  password: ${DB_PASS}
-
+  database: ${DATABASE_URL}
+    
+# postgres://username:password@host:port/database
