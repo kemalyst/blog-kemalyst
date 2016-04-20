@@ -19,19 +19,6 @@ services:
     working_dir: /app/user
     volumes:
       - '.:/app/user'
-  shell:
-    build: .
-    command: bash
-    working_dir: /app/user
-    environment:
-      PORT: 3000
-      DATABASE_URL: 'postgres://postgres:@pg:5432/postgres'
-    ports:
-      - '80:3000'
-    depends_on:
-      - pg
-    volumes:
-      - '.:/app/user'
   pg:
     image: postgres
 
