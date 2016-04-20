@@ -11,8 +11,8 @@ services:
       - '80:3000'
     depends_on:
       - pg
-    volumes:
-      - '.:/app/user'
+    #volumes:
+    #  - '.:/app/user'
   spec:
     build: .
     command: 'crystal spec'
