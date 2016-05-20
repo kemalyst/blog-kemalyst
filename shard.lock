@@ -2,11 +2,11 @@ version: 1.0
 shards:
   delimiter_tree:
     github: drujensen/delimiter_tree
-    commit: ff00d3f211aa0e6850b04c12941e88522c3a59d7
+    commit: eeddecd0475710adb6414595e6144bfdce3a95f1
 
   kemalyst:
     github: drujensen/kemalyst
-    commit: cd8fc5cfb423c8deccbff612acc8bd292d61d498
+    commit: f02346fc0ac2db45f7dd8849d000d1da2e9041dc
 
   kilt:
     github: jeromegn/kilt
@@ -18,9 +18,9 @@ shards:
 
   pg:
     github: will/crystal-pg
-    commit: cafe38b532b859122337455aa09afeac4f8deeaa
+    commit: cafe757dafe6b7257c3d0c0192c243df64d43af4
 
   pool:
     github: ysbaddaden/pool
-    commit: eda12cf38fcf0d70f10ea99ac0bb70a58ab0cdda
+    commit: c4ecfad1b87fbd8c6484d1fd536ccfd14c40cc94
 
