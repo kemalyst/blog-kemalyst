@@ -6,7 +6,7 @@ class Post < Kemalyst::Model
   adapter pg
   
   sql_mapping({ 
-    name: ["VARCHAR(255)", String] 
+    name: ["VARCHAR(255)", String],
     body: ["TEXT", String]
   })
 
