@@ -6,11 +6,11 @@ shards:
 
   kemalyst:
     github: drujensen/kemalyst
-    commit: 0d93f818c1cd36b98b6c89e88388fe66a357289f
+    commit: 8c2dd64a1f49bd04d7defc882642a2e46e88f158
 
   kilt:
     github: jeromegn/kilt
-    commit: 332015badce121b624b757ddc494b3162ac49da9
+    commit: adf515f1212fe985dbc9da561f02ade11bfe8e5f
 
   mocks:
     github: waterlink/mocks.cr
