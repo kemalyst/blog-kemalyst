@@ -22,7 +22,7 @@ services:
       POSTGRES_PASSWORD: 'password'
     volumes_from:
       - data
-  data:
+  data: 
     image: heroku/cedar
     volumes:
-      - /var/lib/postgres/data
+      - '/var/lib/postgres/data'
