@@ -5,14 +5,11 @@ services:
     command: 'crystal run src/app.cr'
     working_dir: /app/user
     environment:
-      PORT: 3000
-      DATABASE_URL: 'postgres://postgres:@pg:5432/postgres'
+      DATABASE_URL: 'postgres://postgres:password@pg:5432/postgres'
     ports:
       - '80:3000'
     depends_on:
       - pg
-    #volumes:
-    #  - '.:/app/user'
   spec:
     build: .
     command: 'crystal spec'
@@ -21,4 +18,11 @@ services:
       - '.:/app/user'
   pg:
     image: postgres
-
+    environment:
+      POSTGRES_PASSWORD: 'password'
+    volumes_from:
+      - data
+  data:
+    image: heroku/cedar
+    volumes:
+      - /var/lib/postgres/data
