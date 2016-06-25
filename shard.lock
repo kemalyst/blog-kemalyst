@@ -6,7 +6,11 @@ shards:
 
   kemalyst:
     github: drujensen/kemalyst
-    commit: b395a1abe5a83261c44dbdf2b37f37fcfbc8972f
+    commit: e75ef048092b01f1d0a6fe2a0769ba2993d5a499
+
+  kemalyst-model:
+    github: drujensen/kemalyst-model
+    commit: b05934e3528ecf7cc3f5b86db658b4f7935ff86b
 
   kilt:
     github: jeromegn/kilt
@@ -18,7 +22,7 @@ shards:
 
   pg:
     github: will/crystal-pg
-    commit: 7a386e95a8bc31c49d17b06233ac018c1a9d7909
+    commit: cafe3e90b4a239aa9819482543c63503a6a3f477
 
   pool:
     github: ysbaddaden/pool

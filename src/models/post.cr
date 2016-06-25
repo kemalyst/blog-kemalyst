@@ -1,6 +1,6 @@
-require "kemalyst"
-require "kemalyst/adapter/pg"
-require "markdown/markdown"
+require "kemalyst-model"
+require "kemalyst-model/adapter/pg"
+require "markdown"
 
 class Post < Kemalyst::Model
   adapter pg
