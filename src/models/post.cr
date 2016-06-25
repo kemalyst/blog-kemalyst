@@ -1,4 +1,3 @@
-require "kemalyst-model"
 require "kemalyst-model/adapter/pg"
 require "markdown"
 
