@@ -4,9 +4,9 @@ services:
   - docker
 
 before_install:
-  - docker build -t drujensen/blog .
+  - docker build -t drujensen/blog-kemalyst .
 
 script:
-  - docker run drujensen/blog /bin/sh -c "cd /app/user; crystal spec"
+  - docker run drujensen/blog-kemalyst /bin/sh -c "cd /app/user; crystal spec"
 
 
