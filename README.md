@@ -1,6 +1,6 @@
 # Blog using Crystal and Kemalyst
 
-[![Build Status](https://travis-ci.org/drujensen/blog.svg?branch=master)](https://travis-ci.org/drujensen/blog)
+[![Build Status](https://travis-ci.org/drujensen/blog-kemalyst.svg?branch=master)](https://travis-ci.org/drujensen/blog-kemalyst)
 
 This is a sample application that shows how to build a crud application.  This
 also provides an example of securing specific pages and leveraging the session
