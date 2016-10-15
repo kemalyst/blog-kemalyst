@@ -28,9 +28,19 @@ password: password
 
 ## Docker and Docker Compose
 
-The Docker scripts are compatible with Heroku Cedar Images.  You can skip the above and run:
+The Docker scripts are compatible with Heroku Cedar Images.  
+
+You can skip the above and run:
 ```
-docker-compose run web
+docker-compose up -d
+```
+
+This will start an instance of postgres, migrate the database, run the specs,
+and launch the site at http://localhost:80
+
+To view the logs:
+```
+docker-compose logs -f
 ```
 
 ## Contributing

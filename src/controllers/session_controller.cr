@@ -2,7 +2,6 @@ require "crypto/md5"
 include Kemalyst
 
 module SessionController
-  
   class New < Controller
     def call(context)
       authorized = context.session.has_key?("authorized")

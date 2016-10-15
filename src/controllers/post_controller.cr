@@ -2,7 +2,6 @@ require "../models/post"
 include Kemalyst
 
 module PostController
-  
   class Index < Controller
     def call(context)
       authorized = context.session.has_key?("authorized")

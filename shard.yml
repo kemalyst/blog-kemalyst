@@ -13,6 +13,7 @@ dependencies:
   pg:
     github: will/crystal-pg
     branch: master
+
 development_dependencies:
   mocks:
     github: waterlink/mocks.cr
