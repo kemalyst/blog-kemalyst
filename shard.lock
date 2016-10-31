@@ -6,11 +6,11 @@ shards:
 
   kemalyst:
     github: drujensen/kemalyst
-    commit: 0c1933e326a774fc8dc56409628102f8abcdf397
+    commit: d5c238029a0d7b1e2e1d80cd29d66a580105b3fc
 
   kemalyst-model:
     github: drujensen/kemalyst-model
-    commit: c95c53bed98ee0fb963cca804806ce23cf75db0c
+    commit: 5185a33176a6196e20f76cd4a244bd04dce8bdc2
 
   kemalyst-validators:
     github: drujensen/kemalyst-validators
@@ -22,13 +22,17 @@ shards:
 
   mocks:
     github: waterlink/mocks.cr
-    version: 0.8.0
+    commit: 6e7f0203158ba09a466d84e23375bc6ebd4c36c7
 
   pg:
     github: will/crystal-pg
-    commit: cafe3e90b4a239aa9819482543c63503a6a3f477
+    commit: cafe0b858007ad09ee67253c90d41ed7647628c4
 
   pool:
     github: ysbaddaden/pool
     commit: c4ecfad1b87fbd8c6484d1fd536ccfd14c40cc94
+
+  singleton:
+    github: waterlink/singleton.cr
+    version: 0.1.1
 

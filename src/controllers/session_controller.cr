@@ -15,8 +15,8 @@ module SessionController
       username = context.params["username"]
       password = context.params["password"]
 
-      puts "Encrypted Password: #{Crypto::MD5.hex_digest(password as String)}"
-      if username == "admin" && Crypto::MD5.hex_digest(password as String) == "5f4dcc3b5aa765d61d8327deb882cf99"
+      puts "Encrypted Password: #{Crypto::MD5.hex_digest(password.as(String))}"
+      if username == "admin" && Crypto::MD5.hex_digest(password.as(String)) == "5f4dcc3b5aa765d61d8327deb882cf99"
         context.session["authorized"] = "true"
       end
       redirect "/"

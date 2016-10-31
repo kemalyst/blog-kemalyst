@@ -39,8 +39,8 @@ module PostController
       authorized = context.session.has_key?("authorized")
       if authorized
         if post = Post.new
-          post.name = context.params["name"] as String
-          post.body = context.params["body"] as String
+          post.name = context.params["name"].as(String)
+          post.body = context.params["body"].as(String)
           post.save()
         end
       end
@@ -71,8 +71,8 @@ module PostController
       if authorized
         id = context.params["id"]
         if post = ::Post.find(id)
-          post.name = context.params["name"] as String
-          post.body = context.params["body"] as String
+          post.name = context.params["name"].as(String)
+          post.body = context.params["body"].as(String)
           post.save
         else
           html "Post with id:#{id} could not be found", 404

@@ -1,10 +1,10 @@
 require "./spec_helper"
 
 Mocks.create_mock Post do
-  mock self.all(query), :inherited
-  mock self.find(id), :inherited
-  mock save(), :inherited
-  mock destroy(), :inherited
+  mock self.all(query)
+  mock self.find(id)
+  mock save()
+  mock destroy()
 end
 
 describe PostController::Index do
@@ -15,8 +15,8 @@ describe PostController::Index do
     allow(Post).to receive(self.all("ORDER BY created_at DESC")).and_return([sample_post])
 
     request = HTTP::Request.new("GET", "/posts")
-    io, context = create_context(request) 
-    response = PostController::Index.instance.call(context) as String
+    io, context = create_context(request)
+    response = PostController::Index.instance.call(context).as(String)
     response.should contain "sample post"
   end
 
@@ -30,9 +30,9 @@ describe PostController::Show do
     allow(Post).to receive(self.find("1")).and_return(sample_post)
 
     request = HTTP::Request.new("GET", "/posts/1")
-    io, context = create_context(request) 
+    io, context = create_context(request)
     context.params["id"] = "1"
-    response = PostController::Show.instance.call(context) as String
+    response = PostController::Show.instance.call(context).as(String)
     response.should contain "sample post"
   end
 
@@ -42,9 +42,9 @@ describe PostController::New do
 
   it "displays form to create a new post when authorized" do
     request = HTTP::Request.new("GET", "/posts/new")
-    io, context = create_context(request) 
+    io, context = create_context(request)
     context.session["authorized"] = "true"
-    response = PostController::New.instance.call(context) as String
+    response = PostController::New.instance.call(context).as(String)
     response.should contain "<h1>New Post</h1>"
   end
 
@@ -54,7 +54,7 @@ describe PostController::Create do
 
   it "creates a new post when authorized" do
     request = HTTP::Request.new("POST", "/posts/create")
-    io, context = create_context(request) 
+    io, context = create_context(request)
     context.session["authorized"] = "true"
     context.params["name"] = "new post"
     context.params["body"] = "new post body"
@@ -78,10 +78,10 @@ describe PostController::Edit do
     allow(Post).to receive(self.find("1")).and_return(sample_post)
 
     request = HTTP::Request.new("GET", "/posts/1/edit")
-    io, context = create_context(request) 
+    io, context = create_context(request)
     context.session["authorized"] = "true"
     context.params["id"] = "1"
-    response = PostController::Edit.instance.call(context) as String
+    response = PostController::Edit.instance.call(context).as(String)
     response.should contain "<h1>Edit Post</h1>"
   end
 
