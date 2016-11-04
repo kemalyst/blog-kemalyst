@@ -9,12 +9,11 @@ license: MIT
 dependencies:
   kemalyst:
     github: drujensen/kemalyst
-    branch: master
+
   pg:
-    github: will/crystal-pg
-    branch: master
+    github: asterite/crystal-pg
+    branch: feature/db
 
 development_dependencies:
   mocks:
     github: waterlink/mocks.cr
-    branch: master
